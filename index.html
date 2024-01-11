@@ -10,11 +10,15 @@
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
   <title>MUNDO DOS SITES | OFICIAL</title>
 </head>
 
 <body>
   <div class="scroll-up-btn"></div>
+
   <div id="progress">
     <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>
   </div>
@@ -24,62 +28,72 @@
       <i class="fa-solid fa-expand"></i>
     </div>
   </div>
-  <header>
-    <div class="container-menu">
-      <nav>
-        <ul>
-          <li class="lista">
-            <a href="#servico" class="menu-link" data-target="servico" id="menu">
-              <span class="icone"><i class="fa-solid fa-users"></i></span>
-              <span class="texto">Serviço</span>
-            </a>
-          </li>
-          <!-- SERVIÇO -->
-          <li class="lista">
-            <a href="#preco" class="menu-link" data-target="preco" id="menu">
-              <span class="icone"><i class="fa-solid fa-money-check-dollar"></i></span>
-              <span class="texto">Preço</span>
-            </a>
-          </li>
-          <!-- PREÇO -->
-                    <li class="lista">
-                      <a href="#pag-inicial" class="menu-link ativo" data-target="inicio" id="menu"  >
-                        <span class="icone"><i class="fa-solid fa-house-user"></i></span>
-                        <span class="texto">Ínicio</span>
-                      </a>
-                    </li>
-                    <!-- INICIO -->
-          <li class="lista ">
-            <a href="#modelo" class="menu-link" data-target="modelo" id="menu">
-              <span class="icone"><i class="fa-solid fa-earth-americas"></i></span>
-              <span class="texto">Modelos</span>
-            </a>
-          </li>
-          <!-- MODELOS -->
-          <li class="lista ">
-            <a href="#contato" class="menu-link" data-target="contatos" id="menu">
-              <span class="icone"><i class="fa-solid fa-mobile-screen-button"></i></span>
-              <span class="texto">Contatos</span>
-            </a>
-          </li>
-          <!-- motivos -->
+
+  <nav>
+    <div class="nav-bar">
+
+      <span class="logonavLogo" id="logoContainer">
+        <img src="https://i.ibb.co/g38NR3w/logomarca.webp" alt="Logomarca" />
+      </span>
+
+      <i class='bx bx-menu sidebarOpen'></i>
+      
+      <div class="menu">
+        <div class="logo-toggle">
+          <i class='bx bx-x siderbarClose'></i>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Preço</a></li>
+          <li><a href="#">Modelos</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
-      </nav>
+        <span class="logonavLogo2"><img src="logomarca.webp" /></span>
+        
+      </div>
+      
+      <div class="darkLight-searchBox">
+        <div class="dark-light">
+          <i class='bx bx-moon moon'></i>
+          <i class='bx bx-sun sun'></i>
+        </div>
+        <div class="searchBox">
+          <div class="searchToggle">
+            <i class='bx bx-x cancel'></i>
+            <i class='bx bx-search search'></i>
+          </div>
+          <div class="search-field">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search'></i>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <section id="pag-inicial">
+
     <div class="Container-inicial">
+
       <div class="titulo">
         <h1>Mundo <span>dos Sites</span></h1>
         <p>
           Eleve Seu Negócio com um Site Profissional e
-          <strong>Hospedagem Grátis por 1 Ano!</strong>
+          <strong>Hospedagem <br>Grátis por 1 Ano!</strong>
         </p>
       </div><!-- titulo -->
-    </div><!-- Container-inicia -->
+
+    </div> <!-- Container-inicia -->
+
     <div class="logo"><img src="https://i.ibb.co/g38NR3w/logomarca.webp" /></div>
+
     <div class="seta"></div>
+
+    <video autoplay loop muted playsinline>
+      <source src="top.mp4" type="video/mp4">
+    </video>
+
   </section>
 
   <section id="servico" class="page active">
@@ -446,7 +460,8 @@
 
     <div class="lojas-moveis" style="display: none;">
       <div class="flex grid-modelo">
-        <div class="img-port " style="background-image: url(https://i.ibb.co/1vnb27Z/Landpage-Lojas-de-moveis.webp);"></div>
+        <div class="img-port " style="background-image: url(https://i.ibb.co/1vnb27Z/Landpage-Lojas-de-moveis.webp);">
+        </div>
       </div><!-- flex -->
     </div>
 
@@ -472,7 +487,7 @@
       Conteúdo para Sorveterias
     </div>
     <!-- =============================================================== -->
-  </section><!-- port folio -->
+  </section><!-- portfolio -->
 
   <section id="contato">
     <div class="contato-texto">

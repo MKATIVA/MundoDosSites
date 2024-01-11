@@ -8,7 +8,14 @@ link.href = "https://archive.org/download/sem-titulo_202308/Logomarca.png"; // S
 
 // Adicione o elemento link ao cabeçalho do documento
 document.head.appendChild(link);
-//////////////////////////////////
+
+////////////////ATUALIZAR A PAGINA//////////////////
+
+document.getElementById("logoContainer").addEventListener("click", function () {
+  location.reload();
+});
+
+/////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
   var modeloSelect = document.getElementById("modeloSelect");
@@ -102,33 +109,7 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
-// Captura todos os elementos do menu ////////////////
-const menuItens = document.querySelectorAll(".menu-link");
-
-// Adiciona um ouvinte de evento de clique para cada item do menu
-menuItens.forEach((item) => {
-  const iconeElement = item.querySelector(".icone");
-  const textoElement = item.querySelector(".texto");
-
-  item.addEventListener("click", () => {
-    // Remove a cor de todos os itens
-    menuItens.forEach((i) => {
-      const iIconeElement = i.querySelector(".icone");
-      const iTextoElement = i.querySelector(".texto");
-
-      iTextoElement.style.display = "none";
-      iIconeElement.style.color = "#fff";
-      iIconeElement.style.transform = "translateY(0)";
-    });
-
-    // Define a cor e animação apenas para o item clicado
-    textoElement.style.display = "inline-block";
-    textoElement.style.color = "#FF6800";
-    iconeElement.style.color = "#ffb682";
-    iconeElement.style.transform = "translateY(-10px)";
-    textoElement.style.transform = "translateY(-5px)";
-  });
-});
+/////////////////////////////////////////////////////////
 
 const fullscreenButton = document.getElementById("fullscreen-button"); // Obter o botão pelo ID
 
@@ -152,5 +133,47 @@ window.addEventListener("scroll", () => {
     fullscreenButton.style.display = "block";
   } else {
     fullscreenButton.style.display = "none";
+  }
+});
+
+/////////////////////////////////////
+
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+let getMode = localStorage.getItem("mode");
+if (getMode && getMode === "dark-mode") {
+  body.classList.add("dark");
+}
+// js code to toggle dark and light mode
+modeToggle.addEventListener("click", () => {
+  modeToggle.classList.toggle("active");
+  body.classList.toggle("dark");
+  // js code to keep user selected mode even page refresh or file reopen
+  if (!body.classList.contains("dark")) {
+    localStorage.setItem("mode", "light-mode");
+  } else {
+    localStorage.setItem("mode", "dark-mode");
+  }
+});
+// js code to toggle search box
+searchToggle.addEventListener("click", () => {
+  searchToggle.classList.toggle("active");
+});
+
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click", () => {
+  nav.classList.add("active");
+});
+body.addEventListener("click", (e) => {
+  let clickedElm = e.target;
+  if (
+    !clickedElm.classList.contains("sidebarOpen") &&
+    !clickedElm.classList.contains("menu")
+  ) {
+    nav.classList.remove("active");
   }
 });
