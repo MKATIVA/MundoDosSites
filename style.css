@@ -232,8 +232,8 @@ nav .nav-bar .logo a {
 }
 
 .nav-links li:hover a {
-  color: #ffffff;
-  font-size: 25px;
+  color: #FF6800;
+  font-size: 30px;
 }
 
 .nav-links li a::before {
@@ -377,6 +377,7 @@ body.dark .search-field i {
 }
 
 @media (max-width: 790px) {
+
   nav .nav-bar .sidebarOpen {
     display: block;
   }
