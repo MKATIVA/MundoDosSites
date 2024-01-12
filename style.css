@@ -19,16 +19,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #180461;
+  background: #ac95ff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--Cor-Laranja);
+  background: var(--Cor-Lilas-1);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--Cor-Lilas-4);
+  background: var(--Cor-Lilas-2);
 }
 
 .BOTAO {
@@ -170,7 +170,6 @@ body.dark {
 nav.initial-transparent {
   background-color: transparent;
 }
-
 nav.scrolled {
   position: fixed;
   top: 0;
@@ -179,9 +178,7 @@ nav.scrolled {
   width: 100%;
   background-color: var(--nav-color);
   z-index: 100;
-
 }
-
 nav.scrolled .nav-bar {
   position: relative;
   height: 100%;
@@ -193,15 +190,9 @@ nav.scrolled .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
-
 nav.scrolled .nav-bar .logo a {
   font-size: 20px;
-}
-
-nav.scrolled .nav-bar .sidebarOpen {
-  display: none;
 }
 
 /* //////////////////////////// */
@@ -212,27 +203,19 @@ nav {
   left: 0;
   height: 70px;
   width: 100%;
-  background-color: var(--nav-color);
   z-index: 100;
 }
-
-/* body.dark nav {
-  border: 1px solid #3b0ce2;
-}
- */
 nav .nav-bar {
   position: relative;
   height: 100%;
   max-width: 1000px;
   width: 100%;
-  /* background-color: var(--nav-color); */
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 nav .nav-bar .sidebarOpen {
   color: var(--text-color);
   font-size: 35px;
@@ -240,7 +223,6 @@ nav .nav-bar .sidebarOpen {
   cursor: pointer;
   display: none;
 }
-
 nav .nav-bar .logo a {
   font-size: 25px;
   font-weight: 500;
@@ -251,17 +233,14 @@ nav .nav-bar .logo a {
 .menu .logo-toggle {
   display: none;
 }
-
 .nav-bar .nav-links {
   display: flex;
   align-items: center;
 }
-
 .nav-bar .nav-links li {
   margin: 0 5px;
   list-style: none;
 }
-
 .nav-links li a {
   position: relative;
   font-size: 20px;
@@ -270,9 +249,8 @@ nav .nav-bar .logo a {
   text-decoration: none;
   padding: 10px;
 }
-
 .nav-links li:hover a {
-  color: #FF6800;
+  color: #53ffff;
   font-size: 30px;
 }
 
@@ -285,7 +263,7 @@ nav .nav-bar .logo a {
   height: 6px;
   width: 6px;
   border-radius: 50%;
-  background-color: var(--text-color);
+  background-color: #FF6800 ;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -418,6 +396,35 @@ body.dark .search-field i {
 
 @media (max-width: 790px) {
 
+  nav.initial-transparent {
+      background-color: var(--nav-color);
+    }
+
+  nav.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+    
+  }
+
+  nav.scrolled .nav-bar {
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
   nav .nav-bar .sidebarOpen {
     display: block;
   }
@@ -487,10 +494,9 @@ body.dark .search-field i {
 #pag-inicial::after {
   content: "";
   position: absolute;
-  background-color: #40269e;
+  background-color: #40269e94;
   inset: 0;
   z-index: -1;
-  opacity: 0.6;
 }
 
 video {
@@ -1301,6 +1307,14 @@ iframe {
 @media (max-width: 360px) {}
 
 @media (max-width: 480px) {
+      .nav-links li a {
+          position: relative;
+          font-size: 20px;
+          font-weight: 400;
+          color: var(--text-color);
+          text-decoration: none;
+          padding: 10px;
+        }
 
   .logonavLogo2 {
     position: absolute;
@@ -1531,6 +1545,14 @@ iframe {
     z-index: -1;
     width: 170%;
   }
+    .nav-links li a {
+      position: relative;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 5px;
+    }
 
   .logonavLogo2 {
     position: absolute;

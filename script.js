@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ///////////////pesquisa inserido//////////////////
+
 function searchFunction() {
   // Obtém o valor de pesquisa inserido pelo usuário
   var searchTerm = document
@@ -39,15 +40,18 @@ function searchFunction() {
 
   // Itera sobre cada seção para verificar se contém o termo de pesquisa
   sections.forEach(function (section) {
-    var sectionContent = section.textContent.toLowerCase();
+    // Ignora o ícone do menu
+    if (!section.classList.contains("sidebarOpen")) {
+      var sectionContent = section.textContent.toLowerCase();
 
-    // Verifica se a seção contém o termo de pesquisa
-    if (sectionContent.includes(searchTerm)) {
-      // Se sim, exibe a seção
-      section.style.display = "block";
-    } else {
-      // Se não, oculta a seção
-      section.style.display = "none";
+      // Verifica se a seção contém o termo de pesquisa
+      if (sectionContent.includes(searchTerm)) {
+        // Se sim, exibe a seção
+        section.style.display = "block";
+      } else {
+        // Se não, oculta a seção
+        section.style.display = "none";
+      }
     }
   });
 
@@ -60,11 +64,14 @@ function searchFunction() {
         location.reload();
       }
     });
+
+  // Adiciona um ouvinte de evento ao ícone de cancelamento para recarregar a página
+  document
+    .querySelector(".searchToggle .cancel")
+    .addEventListener("click", function () {
+      location.reload();
+    });
 }
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   var modeloSelect = document.getElementById("modeloSelect");
