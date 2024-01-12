@@ -118,7 +118,7 @@ svg {
 /* ===== Colours ===== */
 :root {
   --body-color: #E4E9F7;
-/*   --nav-color: #4070F4; */
+  /*   --nav-color: #4070F4; */
   --nav-color: #8361ff;
   --side-nav: #010718;
   --text-color: #FFF;
@@ -136,14 +136,14 @@ svg {
   --posicao-atual: 0;
 }
 
-.logonavLogo img{
+.logonavLogo img {
   cursor: pointer;
   width: 45px;
 }
 
 /* LOGOMARCA - MENU */
 
-.logonavLogo2{
+.logonavLogo2 {
   position: absolute;
   bottom: 30px;
   left: 40px;
@@ -159,12 +159,52 @@ body {
 
 body.dark {
   --body-color: #18191A;
-/*   --nav-color: #242526; */
+  /*   --nav-color: #242526; */
   --nav-color: #2c05b9;
   --side-nav: #242526;
   --text-color: #CCC;
   --search-bar: #242526;
 }
+
+/* //////////////////////////// */
+nav.initial-transparent {
+  background-color: transparent;
+}
+
+nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: var(--nav-color);
+  z-index: 100;
+
+}
+
+nav.scrolled .nav-bar {
+  position: relative;
+  height: 100%;
+  max-width: 1000px;
+  width: 100%;
+  background-color: var(--nav-color);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+nav.scrolled .nav-bar .logo a {
+  font-size: 20px;
+}
+
+nav.scrolled .nav-bar .sidebarOpen {
+  display: none;
+}
+
+/* //////////////////////////// */
 
 nav {
   position: fixed;
@@ -176,16 +216,16 @@ nav {
   z-index: 100;
 }
 
-body.dark nav {
+/* body.dark nav {
   border: 1px solid #3b0ce2;
 }
-
+ */
 nav .nav-bar {
   position: relative;
   height: 100%;
   max-width: 1000px;
   width: 100%;
-  background-color: var(--nav-color);
+  /* background-color: var(--nav-color); */
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
@@ -501,7 +541,7 @@ video {
   text-transform: uppercase;
   font-size: 23px;
   color: #ffffff;
-  
+
   font-weight: 500;
 }
 
@@ -1263,15 +1303,15 @@ iframe {
 @media (max-width: 480px) {
 
   .logonavLogo2 {
-      position: absolute;
-      bottom: 30px;
-      left: 45px;
-      display: block;
-    }
-  
-    .logonavLogo2 img {
-      width: 250px;
-    }
+    position: absolute;
+    bottom: 30px;
+    left: 45px;
+    display: block;
+  }
+
+  .logonavLogo2 img {
+    width: 250px;
+  }
 
   .titulo h1 {
     font-size: 75px;
@@ -1492,15 +1532,16 @@ iframe {
     width: 170%;
   }
 
-.logonavLogo2{
-  position: absolute;
-  bottom: 30px;
-  left: 80px;
-  display: block;
-}
-.logonavLogo2 img{
-  width: 150px;
-}
+  .logonavLogo2 {
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    display: block;
+  }
+
+  .logonavLogo2 img {
+    width: 150px;
+  }
 
   .titulo h1 {
     font-size: 75px;

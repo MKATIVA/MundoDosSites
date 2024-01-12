@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <nav>
+  <nav class="initial-transparent">
     <div class="nav-bar">
 
       <span class="logonavLogo" id="logoContainer">
@@ -38,7 +38,7 @@
 
       <i class='bx bx-menu sidebarOpen'></i>
       
-      <div class="menu">
+      <div class="menu ativo">
         <div class="logo-toggle">
           <i class='bx bx-x siderbarClose'></i>
         </div>
@@ -64,15 +64,15 @@
             <i class='bx bx-search search'></i>
           </div>
           <div class="search-field">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Pesquisa..." oninput="searchFunction()">
             <i class='bx bx-search'></i>
           </div>
-        </div>
-      </div>
+        </div><!-- searchBox -->
+      </div><!-- darkLight-searchBox -->
     </div>
   </nav>
 
-  <section id="pag-inicial">
+  <section id="pag-inicial" class="searchable-section">
 
     <div class="Container-inicial">
 
@@ -96,7 +96,7 @@
 
   </section>
 
-  <section id="servico" class="page active">
+  <section id="servico" class="page active searchable-section" >
     <h1>
       Criando Páginas
       <span>Alcance Seus Objetivos Agora!</span>
@@ -194,7 +194,7 @@
     </div><!-- MOTIVOS -->
   </section>
 
-  <section id="preco" class="page">
+  <section id="preco" class="page searchable-section">
 
     <div class="container-preco">
       <div class="preco" id="prata">
@@ -298,7 +298,7 @@
     <!-- informacoes -->
   </section>
 
-  <section id="modelo" class="portfolio">
+  <section id="modelo" class="portfolio searchable-section">
 
     <div class="texto-cental">
       <h1 class="modelos-de-sites">MODELOS DE <span>SITES</span></h1>
@@ -489,7 +489,7 @@
     <!-- =============================================================== -->
   </section><!-- portfolio -->
 
-  <section id="contato">
+  <section id="contato" class="searchable-section">
     <div class="contato-texto">
       <h1>fale <span>conosco</span></h1>
     </div>

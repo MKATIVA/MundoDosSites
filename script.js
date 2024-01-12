@@ -10,12 +10,61 @@ link.href = "https://archive.org/download/sem-titulo_202308/Logomarca.png"; // S
 document.head.appendChild(link);
 
 ////////////////ATUALIZAR A PAGINA//////////////////
-
 document.getElementById("logoContainer").addEventListener("click", function () {
   location.reload();
 });
 
-/////////////////////////////////
+/////////////SCROLL////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  var nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+});
+
+///////////////pesquisa inserido//////////////////
+function searchFunction() {
+  // Obtém o valor de pesquisa inserido pelo usuário
+  var searchTerm = document
+    .querySelector(".search-field input")
+    .value.toLowerCase();
+
+  // Obtém todas as seções que podem ser pesquisadas
+  var sections = document.querySelectorAll(".searchable-section");
+
+  // Itera sobre cada seção para verificar se contém o termo de pesquisa
+  sections.forEach(function (section) {
+    var sectionContent = section.textContent.toLowerCase();
+
+    // Verifica se a seção contém o termo de pesquisa
+    if (sectionContent.includes(searchTerm)) {
+      // Se sim, exibe a seção
+      section.style.display = "block";
+    } else {
+      // Se não, oculta a seção
+      section.style.display = "none";
+    }
+  });
+
+  // Adiciona um ouvinte de evento ao campo de pesquisa para detectar a exclusão do conteúdo
+  document
+    .querySelector(".search-field input")
+    .addEventListener("input", function () {
+      // Se o campo de pesquisa estiver vazio, recarrega a página
+      if (this.value.trim() === "") {
+        location.reload();
+      }
+    });
+}
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   var modeloSelect = document.getElementById("modeloSelect");
