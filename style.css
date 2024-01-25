@@ -1329,12 +1329,12 @@ iframe {
   .logonavLogo2 {
     position: absolute;
     bottom: -50px;
-    left: 45px;
+    left: 80px;
     display: block;
   }
 
   .logonavLogo2 img {
-    width: 250px;
+    width: 180px;
   }
 
   .titulo h1 {
