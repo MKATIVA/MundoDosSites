@@ -170,6 +170,7 @@ body.dark {
 nav.initial-transparent {
   background-color: transparent;
 }
+
 nav.scrolled {
   position: fixed;
   top: 0;
@@ -179,6 +180,7 @@ nav.scrolled {
   background-color: var(--nav-color);
   z-index: 100;
 }
+
 nav.scrolled .nav-bar {
   position: relative;
   height: 100%;
@@ -191,6 +193,7 @@ nav.scrolled .nav-bar {
   align-items: center;
   justify-content: space-between;
 }
+
 nav.scrolled .nav-bar .logo a {
   font-size: 20px;
 }
@@ -205,6 +208,7 @@ nav {
   width: 100%;
   z-index: 100;
 }
+
 nav .nav-bar {
   position: relative;
   height: 100%;
@@ -216,6 +220,7 @@ nav .nav-bar {
   align-items: center;
   justify-content: space-between;
 }
+
 nav .nav-bar .sidebarOpen {
   color: var(--text-color);
   font-size: 35px;
@@ -223,6 +228,7 @@ nav .nav-bar .sidebarOpen {
   cursor: pointer;
   display: none;
 }
+
 nav .nav-bar .logo a {
   font-size: 25px;
   font-weight: 500;
@@ -233,14 +239,17 @@ nav .nav-bar .logo a {
 .menu .logo-toggle {
   display: none;
 }
+
 .nav-bar .nav-links {
   display: flex;
   align-items: center;
 }
+
 .nav-bar .nav-links li {
   margin: 0 5px;
   list-style: none;
 }
+
 .nav-links li a {
   position: relative;
   font-size: 20px;
@@ -249,6 +258,7 @@ nav .nav-bar .logo a {
   text-decoration: none;
   padding: 10px;
 }
+
 .nav-links li:hover a {
   color: #53ffff;
   font-size: 30px;
@@ -263,7 +273,7 @@ nav .nav-bar .logo a {
   height: 6px;
   width: 6px;
   border-radius: 50%;
-  background-color: #FF6800 ;
+  background-color: #FF6800;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -397,8 +407,8 @@ body.dark .search-field i {
 @media (max-width: 790px) {
 
   nav.initial-transparent {
-      background-color: var(--nav-color);
-    }
+    background-color: var(--nav-color);
+  }
 
   nav.scrolled {
     position: fixed;
@@ -408,7 +418,7 @@ body.dark .search-field i {
     width: 100%;
     background-color: var(--nav-color);
     z-index: 100;
-    
+
   }
 
   nav.scrolled .nav-bar {
@@ -1304,17 +1314,16 @@ iframe {
   transition: 0.5s;
 }
 
-@media (max-width: 360px) {}
 
 @media (max-width: 480px) {
-      .nav-links li a {
-          position: relative;
-          font-size: 20px;
-          font-weight: 400;
-          color: var(--text-color);
-          text-decoration: none;
-          padding: 10px;
-        }
+  .nav-links li a {
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+  }
 
   .logonavLogo2 {
     position: absolute;
@@ -1545,14 +1554,15 @@ iframe {
     z-index: -1;
     width: 170%;
   }
-    .nav-links li a {
-      position: relative;
-      font-size: 20px;
-      font-weight: 400;
-      color: var(--text-color);
-      text-decoration: none;
-      padding: 5px;
-    }
+
+  .nav-links li a {
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px;
+  }
 
   .logonavLogo2 {
     position: absolute;
