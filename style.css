@@ -455,6 +455,7 @@ body.dark .search-field i {
 
   nav.active .menu {
     left: -0%;
+    height: 100%;
   }
 
   nav.active .nav-bar .navLogo a {
