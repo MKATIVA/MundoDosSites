@@ -42,6 +42,23 @@
         <div class="logo-toggle">
           <i class='bx bx-x siderbarClose'></i>
         </div>
+
+        <div id="profile-container">
+          <!-- Adicione uma imagem padrão -->
+          <div id="profile-image-container">
+            <label for="file-input">
+              <a href="#" id="choose-image-link" onclick="triggerFileInput()">Escolher Foto</a>
+            </label>
+            <!-- quero que essa opção fique em cima da imagem -->
+            <img id="profile-image" src="default.jpg" alt="Profile Image">
+            <img id="hidden-image" src="Sem título-2.png" alt="" style="display: none;">
+          </div>
+
+          <!-- Adicione um botão para permitir a troca de foto -->
+          <input type="file" accept="image/*" id="file-input" style="display: none;"
+            onchange="changeProfileImage(event)">
+        </div>
+
         <ul class="nav-links">
           <li><a href="#pag-inicial">Inicio</a></li>
           <li><a href="#servico">Serviços</a></li>
@@ -504,7 +521,8 @@
               <p>Dúvidas? Contate-nos no WhatsApp.</p>
             </div>
           </div><!-- zapGreal -->
-          <a href="https://api.whatsapp.com/send?phone=5591986350334&text=Olá,%20notamos%20que%20algumas%20dúvidas%20podem%20ter%20surgido,%20e%20estamos%20aqui%20para%20esclarecê-las%20e%20oferecer%20toda%20a%20assistência%20necessária." class="Contatar-zap">Contatar</a>
+          <a href="https://api.whatsapp.com/send?phone=5591986350334&text=Olá,%20notamos%20que%20algumas%20dúvidas%20podem%20ter%20surgido,%20e%20estamos%20aqui%20para%20esclarecê-las%20e%20oferecer%20toda%20a%20assistência%20necessária."
+            class="Contatar-zap">Contatar</a>
         </div><!-- contato-geral -->
       </div><!-- contatos -->
 
@@ -517,8 +535,8 @@
               <p>Procurando soluções de marketing ou criação de sites? Estamos prontos para ajudar.</p>
             </div>
           </div><!-- zapGreal -->
-          <a href="https://api.whatsapp.com/send?phone=5591986350334&text=Olá!%20*Somos%20a%20Mundo%20dos%20Sites%20Oficial*%20e%20estamos%20entusiasmados%20por%20você%20querer%20saber%20mais%20sobre%20nós.%20Nossa%20empresa%20está%20focada%20em%20fornecer%20serviços%20de%20hospedagem%20e%20desenvolvimento%20de%20sites%20de%20alta%20qualidade.%20Queremos%20compartilhar%20nossos%20valores,%20nossa%20equipe%20dedicada,%20os%20benefícios%20de%20escolher%20nossos%20serviços,%20incluindo%20nossa%20exclusiva%20solução%20de%20hospedagem.%20Estamos%20aqui%20para%20ajudar%20sua%20presença%20online%20a%20ter%20sucesso.%20Como%20podemos%20atender%20às%20suas%20necessidades%20hoje?" class="Contatar-especialista"
-            id="Contatar-especialista">Fale com um especialista</a>
+          <a href="https://api.whatsapp.com/send?phone=5591986350334&text=Olá!%20*Somos%20a%20Mundo%20dos%20Sites%20Oficial*%20e%20estamos%20entusiasmados%20por%20você%20querer%20saber%20mais%20sobre%20nós.%20Nossa%20empresa%20está%20focada%20em%20fornecer%20serviços%20de%20hospedagem%20e%20desenvolvimento%20de%20sites%20de%20alta%20qualidade.%20Queremos%20compartilhar%20nossos%20valores,%20nossa%20equipe%20dedicada,%20os%20benefícios%20de%20escolher%20nossos%20serviços,%20incluindo%20nossa%20exclusiva%20solução%20de%20hospedagem.%20Estamos%20aqui%20para%20ajudar%20sua%20presença%20online%20a%20ter%20sucesso.%20Como%20podemos%20atender%20às%20suas%20necessidades%20hoje?"
+            class="Contatar-especialista" id="Contatar-especialista">Fale com um especialista</a>
         </div><!-- contato-geral -->
       </div><!-- contatos -->
     </div>

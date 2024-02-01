@@ -233,3 +233,55 @@ body.addEventListener("click", (e) => {
     nav.classList.remove("active");
   }
 });
+
+
+
+///////////////////////////////
+
+
+// Função para mostrar o input de arquivo quando o link é clicado
+function triggerFileInput() {
+  document.getElementById("file-input").click();
+}
+
+// Função para mudar a foto de perfil
+function changeProfileImage(event) {
+  // Verifique se o usuário selecionou um arquivo
+  if (event && event.target.files && event.target.files[0]) {
+    // Crie um objeto FileReader para ler o arquivo
+    var reader = new FileReader();
+
+    // Defina a função de callback para quando a leitura estiver concluída
+    reader.onload = function (e) {
+      // Atualize a imagem com a nova imagem local
+      document.getElementById("profile-image").style.display = "block";
+      document.getElementById("profile-image").src = e.target.result;
+      document.getElementById("hidden-image").style.display = "none";
+
+      // Armazene a imagem no localStorage para recuperar após recarregar
+      localStorage.setItem("profileImage", e.target.result);
+    };
+
+    // Leia o arquivo como URL de dados
+    reader.readAsDataURL(event.target.files[0]);
+  }
+}
+
+// Função para remover a foto de perfil
+function removeProfileImage() {
+  // Coloque a URL da imagem padrão quando a foto for removida
+  var defaultImageURL = "Sem título-2.png";
+
+  // Atualize a imagem com a imagem padrão
+  document.getElementById("profile-image").style.display = "none";
+  document.getElementById("hidden-image").style.display = "block";
+
+  // Armazene a imagem padrão no localStorage
+  localStorage.setItem("profileImage", defaultImageURL);
+}
+
+// Verifique se há uma imagem armazenada e aplique-a
+var storedImage = localStorage.getItem("profileImage");
+if (storedImage !== null && storedImage !== "") {
+  document.getElementById("profile-image").src = storedImage;
+}
