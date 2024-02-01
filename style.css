@@ -1320,18 +1320,10 @@ iframe {
 
 
 @media (max-width: 480px) {
-  .nav-links li a {
-    position: relative;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 10px;
-  }
 
   .logonavLogo2 {
     position: absolute;
-    bottom: -50px;
+    bottom: -90px;
     left: 80px;
     display: block;
   }
