@@ -256,6 +256,7 @@ nav .nav-bar .logo a {
   font-weight: 400;
   color: var(--text-color);
   text-decoration: none;
+  padding: 10px;
 }
 
 .nav-links li:hover a {
@@ -1560,7 +1561,7 @@ iframe {
 
   .logonavLogo2 {
     position: absolute;
-    bottom: 30px;
+    bottom: -50px;
     left: 80px;
     display: block;
   }
