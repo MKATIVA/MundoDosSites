@@ -165,6 +165,7 @@ body {
   flex-direction: column;
   position: relative;
   text-align: center;
+  overflow-x: hidden;
 
   h1 {
     padding: 20px;
