@@ -1,0 +1,52 @@
+.scroll-up-btn {
+    display: none;
+    position: fixed;
+    bottom: -50px;
+    right: 20px;
+    background-color: #6d12ff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+.scroll-up-btn.show {
+    bottom: 50px;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.scroll-up-btn:hover {
+    background-color: #0026ff;
+    color: #fff;
+
+}
+
+.scroll-up-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.scroll-up-btn i {
+    display: block;
+    margin: 0 auto;
+}
+
+.scroll-up-btn.show {
+    display: block;
+}

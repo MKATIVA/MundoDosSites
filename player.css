@@ -1,0 +1,22 @@
+.meuVideoPlayer {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#player {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 480px) {
+    .meuVideoPlayer {
+        width: 100%;
+        max-width: 90%;
+    }
+}
